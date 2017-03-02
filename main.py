@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from time import sleep
-import random
+import random,os
 import json
 from lxml import html
 from collections import defaultdict
@@ -20,9 +20,13 @@ def fwrite(f_name,data):
 
 def page_index(f_name,model,index=1):
 	if model=='r':
-		with open(f_name, 'r') as fl:
-			line = fl.readline()
-		return int(line.strip())
+		if os.path.exists(f_name):
+			with open(f_name, 'r') as fl:
+				line = fl.readline()
+			return int(line.strip())
+		else:
+			page_index(f_name,'w',index=1)
+			return 1
 	elif model=='w':
 		with open(f_name, 'w') as fl:
 			line = fl.write(index)

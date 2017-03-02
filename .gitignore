@@ -1,0 +1,9 @@
+judgment.txt
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+*.cpython-35.pyc
+__pycache__/
