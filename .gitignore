@@ -8,3 +8,4 @@ judgment.txt
 *.cpython-35.pyc
 __pycache__/
 venv/
+*.jpg
