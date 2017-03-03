@@ -7,3 +7,4 @@ judgment.txt
 *.egg-info
 *.cpython-35.pyc
 __pycache__/
+venv/

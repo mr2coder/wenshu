@@ -5,7 +5,7 @@ python3
 
 利用图像识别自动提交验证码,
 
-pytesser是一个验证码识别工具，但是它支持python2.4
+pytesser是一个验证码识别工具，但是它支持python2.4,但是只支持windows
 
 做了一下简单的修改然他支持python3.5
 

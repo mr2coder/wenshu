@@ -4,7 +4,8 @@
 from PIL import Image
 import pytesser.pytessers as pytesser
 import requests
-from main import CaseSpider
+import main
+
 
 
 VURL = "http://wenshu.court.gov.cn/Html_Pages/VisitRemind.html" #验证码登录界面url
@@ -25,7 +26,7 @@ def vertify_pic(pic_name=PICNAME):
 
 def handle_error():
 	url = "http://wenshu.court.gov.cn/Content/CheckVisitCode"
-	spider = CaseSpider("","")
+	spider = main.CaseSpider("","")
 	spider.referer = "http://wenshu.court.gov.cn/Html_Pages/VisitRemind.html"
 	pic_download(url=PURL,pic_name=PICNAME)
 	text = vertify_pic(pic_name=PICNAME)
